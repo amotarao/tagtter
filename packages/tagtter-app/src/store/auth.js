@@ -8,14 +8,22 @@ export const state = () => ({
 });
 
 export const getters = {
+  /** 読み込み中かどうか */
   loading: (state) => state.loading,
 
+  /** 初期化が終わっているかどうか */
   initialized: (state) => state.initialized,
 
+  /** ログイン中かどうか */
   loggingIn: (state) => state.loggingIn,
 
+  /** ログイン済かどうか */
   loggedIn: (state) => state.user !== null,
 
+  /** User情報 */
+  user: (state) => state.user,
+
+  /** UID */
   uid: (state) => (state.user !== null ? state.user.uid : null),
 };
 
