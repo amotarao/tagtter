@@ -20,7 +20,7 @@ export default {
   loading: { color: '#fff' },
   css: ['./src/assets/scss/global.scss'],
   plugins: [],
-  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/stylelint-module', '@nuxtjs/style-resources'],
+  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/stylelint-module', '@nuxtjs/style-resources', '@nuxtjs/vuetify'],
   modules: [],
   styleResources: {
     scss: ['./src/assets/scss/_variables.scss', './src/assets/scss/_mixin.scss'],
