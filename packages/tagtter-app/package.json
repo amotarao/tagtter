@@ -25,6 +25,7 @@
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
+    "@babel/runtime-corejs3": "^7.9.6",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/eslint-config": "^2.0.0",
     "@nuxtjs/eslint-module": "^1.0.0",
@@ -32,6 +33,7 @@
     "@nuxtjs/stylelint-module": "^3.1.0",
     "@nuxtjs/vuetify": "^1.11.2",
     "babel-eslint": "^10.0.1",
+    "core-js": "3",
     "eslint": "^6.1.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-nuxt": ">=0.4.2",
