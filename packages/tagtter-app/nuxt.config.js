@@ -20,8 +20,17 @@ export default {
   loading: { color: '#fff' },
   css: ['./src/assets/scss/global.scss'],
   plugins: [],
-  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/stylelint-module', '@nuxtjs/style-resources', '@nuxtjs/vuetify'],
+  buildModules: [
+    '@nuxtjs/dotenv',
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/stylelint-module',
+    '@nuxtjs/style-resources',
+    '@nuxtjs/vuetify',
+  ],
   modules: [],
+  dotenv: {
+    path: './',
+  },
   styleResources: {
     scss: ['./src/assets/scss/_variables.scss', './src/assets/scss/_mixin.scss'],
   },
@@ -33,6 +42,19 @@ export default {
         sassOptions: {
           fiber: Fiber,
         },
+      },
+    },
+    babel: {
+      presets({ isServer }) {
+        return [
+          [
+            require.resolve('@nuxt/babel-preset-app'),
+            {
+              buildTarget: isServer ? 'server' : 'client',
+              corejs: { version: 3 },
+            },
+          ],
+        ];
       },
     },
   },
